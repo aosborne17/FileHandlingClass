@@ -1,3 +1,4 @@
+from PIL import Image
 
 class Text_homework:
     def __init__(self, text_storage=None):
@@ -36,10 +37,17 @@ class Text_homework:
             return self.text_storage
 
     def read_image_file(self):
-        with open('lol.png', 'rb') as picture:
-                data = picture.read()
-        with open('picture_out.png', 'wb') as f:
-            f.write(data)
+        with open('sasuke.png', 'rb') as picture, open("sasuke_out.png", "wb") as picture2:
+            pic = picture.read()
+            picture2.write(pic)
+            Image.open("sasuke_out.png").show()
+
+
+
+
+
+        # with open('picture_out.png', 'wb') as picture:
+        #     picture.write(picture)
 
 
 
