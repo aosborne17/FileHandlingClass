@@ -15,6 +15,8 @@ self.text_storage=file.read(3)
 important to close the file as it could cause issues
 ```
 
+## Reading Files
+
 file.close() -> will close the file we have opened
 file.tell(n) -> tells us where the pointer is when reading
 file.seek(n) -> Tells the pointer to go back to the point specified
@@ -30,8 +32,11 @@ file = open("written.txt", 'a') # now we are using the 'append' arguement, which
 file = open("written.txt", 'a+') # as well as append, the plus allows us to read the file as well
 
 
+## OS Module
 The OS module in Python provides functions for creating and removing a directory (folder), 
 fetching its contents, changing and identifying the current directory, etc.
+
+## Exceptions
 
 try block --> we try to run a certain code
 
@@ -67,3 +72,13 @@ becomes unreachable.
 
 Here we can create our own exceptions that Python does not have
 E.g. We can raise an error if somebody inputs zero characters when asked for their name
+
+
+## Today's homework
+
+[16:21]
+1. Accept from the user some text. Ensure user enters something else raise an exception.
+After that write that text to a file and then read from this file to  write to another file simultaneously
+2. Reading an image to  writing to another file simultaneously
+
+
