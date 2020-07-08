@@ -82,4 +82,7 @@ E.g. We can raise an error if somebody inputs zero characters when asked for the
 After that write that text to a file and then read from this file to  write to another file simultaneously
 2. Reading an image to  writing to another file simultaneously
 
+Homework Completed, [19:00]
+
+
 
