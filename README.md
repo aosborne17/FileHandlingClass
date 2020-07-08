@@ -32,3 +32,11 @@ file = open("written.txt", 'a+') # as well as append, the plus allows us to read
 
 The OS module in Python provides functions for creating and removing a directory (folder), 
 fetching its contents, changing and identifying the current directory, etc.
+
+try block --> we try to run a certain code
+
+except block --> if there is an exception in the try, we run this block
+
+else --> If there is no exception in the try we run this block
+
+finally --> This block is always run no matter th

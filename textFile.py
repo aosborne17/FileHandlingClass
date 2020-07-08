@@ -16,14 +16,21 @@ class TextFileHandling:
         # open file
         # read the file
         # close the file
+        try:
+            file = open(self.file_path, 'r')
+        except Exception as e:
+            print(e)
+        else:
+            # self.text_storage=file.read()
+            # self.text_storage = file.read(3)
+            self.text_storage = file.readline()
+            # self.text_storage = file.readlines()
+            file.close()
+            return self.text_storage
+        finally: # it will always run irrespecitive of the above outcome
+            file.close()
+            print("Always run!")
 
-        file=open(self.file_path, 'r')
-        # self.text_storage=file.read()
-        # self.text_storage = file.read(3)
-        self.text_storage = file.readline()
-        # self.text_storage = file.readlines()
-        file.close()
-        return self.text_storage
 
     def writeTextFile(self):
         file = open("written.txt", 'w')
@@ -37,6 +44,7 @@ class TextFileHandling:
         print(file.mode) # tells us the mode of the file
         print(file.name) # tells us the name of the file
         return self.text_storage
+
 
 
     def readTextFileUsingWith(self):
@@ -65,7 +73,28 @@ class TextFileHandling:
         print(os.getcwd()) # asking python to display the current directory
         # os.remove("written.txt") this would remove a file
         print(os.listdir()) # this tells us all the files inside of the current directory
-        os.rename("order.txt", "modified.txt") # we have now given the order txt a new name 'modified.txt'
+        # os.chdir("C:/Users/aosbo/PycharmProjects/created_dir_using_OS") # This changes the path of the current directory
+        # os.rename("order.txt", "modified.txt") # we have now given the order txt a new name 'modified.txt'
+        # os.mkdir("Andrew") # Making a new directory within my 'FileHandlingClass' project
+        # os.rmdir("Andrew") # This would remove the directory 'Andrew
+
+
+
+    def playingWithException(self):
+        try:
+            file = open(self.file_path, 'r')
+        except Exception as e:
+            print(e)
+            print("File not present")
+        else:
+            self.text_storage = file.readline()
+            file.close()
+            print("File was successfully found!")
+        finally:
+            print("This will run regardless of the above outcomes!")
+            return self.text_storage
+
+
 
 
 

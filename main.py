@@ -4,7 +4,7 @@
 This is one variable that handles the text file, so if there
 is a change to the path you only have to change one variable
 """
-file_path="order.txt"
+file_path="modified.txt"
 
 from textFile import TextFileHandling
 
@@ -21,4 +21,6 @@ textfileobject = TextFileHandling(file_path)
 # print(textfileobject.writeTextFileUsingWith())
 
 
-(textfileobject.playingWithOSModule())
+# (textfileobject.playingWithOSModule())
+
+print(textfileobject.playingWithException())
