@@ -39,4 +39,25 @@ except block --> if there is an exception in the try, we run this block
 
 else --> If there is no exception in the try we run this block
 
-finally --> This block is always run no matter th
+finally --> This block is always run no matter the above outcomes
+
+```python
+    def playingWithException(self):
+        try:
+            file = open(self.file_path, 'r')
+        except FileNotFoundError as e:  # This exception looks for a specific error
+            print(e)
+            print("File not present")
+        except Exception as e:  # this exception looks for any error
+            print(e)
+        else:
+            self.text_storage = file.readline()
+            file.close()
+            print("File was successfully found!")
+        finally:
+            print("This will run regardless of the above outcomes!")
+            return self.text_storage
+```
+The above code won't work because we have written generalised
+exception before the specific exception, so the specific exception
+becomes unreachable.
