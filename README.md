@@ -45,11 +45,12 @@ finally --> This block is always run no matter the above outcomes
     def playingWithException(self):
         try:
             file = open(self.file_path, 'r')
+
+        except Exception as e:  # this exception looks for any error
+            print(e)
         except FileNotFoundError as e:  # This exception looks for a specific error
             print(e)
             print("File not present")
-        except Exception as e:  # this exception looks for any error
-            print(e)
         else:
             self.text_storage = file.readline()
             file.close()
