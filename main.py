@@ -23,4 +23,6 @@ textfileobject = TextFileHandling(file_path)
 
 # (textfileobject.playingWithOSModule())
 
-print(textfileobject.playingWithException())
+# print(textfileobject.playingWithException())
+
+print(textfileobject.raiseException())

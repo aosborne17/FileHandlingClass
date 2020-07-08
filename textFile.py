@@ -87,20 +87,34 @@ class TextFileHandling:
             print("This will run regardless of the above outcomes!")
             return self.text_storage
 
-"""
-The below code won't work because we have written generalised
-exception before the specific exception, so the specific exception
-becomes unreachable.
 
-    try:
-        file = open(self.file_path, 'r')
-    
-    except Exception as e:  # this exception looks for any error
-        print(e)
-    except FileNotFoundError as e:  # This exception looks for a specific error
-        print(e)
-        print("File not present")
-"""
+    # def raiseException(self):
+    #     try:
+    #         name = (input("Enter your name: "))
+    #         if len(name) == 0:
+    #             raise Exception
+    #     except Exception:
+    #         print("We do not accept empty names, sorry!")
+    #
+    #     else:
+    #         print("Thank you for giving your name {}".format(name))
+
+    def raiseException(self):
+        try:
+            name = (input("Enter your name: "))
+            if len(name) == 0:
+                raise Exception
+        except Exception:
+            print("Sorry we don't take empty names")
+            self.raiseException()
+
+        else:
+            print("Thank you for giving your name {}".format(name))
+
+
+
+
+
 
 """
 The OS module in Python provides functions for creating and 

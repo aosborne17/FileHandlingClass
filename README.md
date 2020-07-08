@@ -62,3 +62,8 @@ finally --> This block is always run no matter the above outcomes
 The above code won't work because we have written generalised
 exception before the specific exception, so the specific exception
 becomes unreachable.
+
+## Raising Exceptions
+
+Here we can create our own exceptions that Python does not have
+E.g. We can raise an error if somebody inputs zero characters when asked for their name
